@@ -1,4 +1,5 @@
 import 'package:delivery_app/dummy_date/dummy_vegetables.dart';
+import 'package:delivery_app/widgets/chips_options.dart';
 import 'package:delivery_app/widgets/list_item.dart';
 import 'package:flutter/material.dart';
 
@@ -7,12 +8,14 @@ class ListingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<dynamic> listItems = [
+      const ChipsOptions(),
+      ...dummyVegetables.map((vegetable) => ListItem(vegetable: vegetable))
+    ];
     return Expanded(
       child: ListView.builder(
-        itemCount: dummyVegetables.length,
-        itemBuilder: ((context, index) => ListItem(
-              vegetable: dummyVegetables[index],
-            )),
+        itemCount: listItems.length,
+        itemBuilder: ((context, index) => listItems[index]),
       ),
     );
   }

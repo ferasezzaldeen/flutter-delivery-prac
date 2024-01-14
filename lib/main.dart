@@ -1,3 +1,4 @@
+import 'package:delivery_app/screens/tabs.dart';
 import 'package:delivery_app/screens/vegetables.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Deliveru', home: VegetablesScreen());
+    return MaterialApp(title: 'Delivery', home: TabsScreen());
   }
 }

@@ -70,6 +70,9 @@ flutter:
     - assets/images/Media.png
     - assets/icons/heart.svg
     - assets/icons/shoppingcart.svg
+    - assets/icons/shopping_cart.svg
+    - assets/icons/grid.svg
+    - assets/icons/user.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

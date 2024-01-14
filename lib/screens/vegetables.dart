@@ -1,7 +1,5 @@
 import 'package:delivery_app/widgets/Listing_widget.dart';
-import 'package:delivery_app/widgets/chips_options.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class VegetablesScreen extends StatelessWidget {
   const VegetablesScreen({super.key});
@@ -27,38 +25,38 @@ class VegetablesScreen extends StatelessWidget {
           ),
         ),
         bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(0),
-            child: SizedBox(
-              height: 40,
-              width: 374,
-              child: TextField(
-                textAlignVertical: TextAlignVertical.bottom,
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(
-                    Icons.search,
-                    size: 24,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(27.0),
-                    borderSide:
-                        const BorderSide(color: Color(0XFFD9D0E3), width: 1),
-                  ),
-                  filled: true,
-                  hintStyle: TextStyle(color: Colors.grey[800]),
-                  hintText: "Search",
-                  fillColor: Colors.white,
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(27.0),
-                    borderSide:
-                        const BorderSide(color: Color(0XFFD9D0E3), width: 1),
-                  ),
+          preferredSize: const Size.fromHeight(0),
+          child: SizedBox(
+            height: 40,
+            width: 374,
+            child: TextField(
+              textAlignVertical: TextAlignVertical.bottom,
+              decoration: InputDecoration(
+                prefixIcon: const Icon(
+                  Icons.search,
+                  size: 24,
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(27.0),
+                  borderSide:
+                      const BorderSide(color: Color(0XFFD9D0E3), width: 1),
+                ),
+                filled: true,
+                hintStyle: TextStyle(color: Colors.grey[800]),
+                hintText: "Search",
+                fillColor: Colors.white,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(27.0),
+                  borderSide:
+                      const BorderSide(color: Color(0XFFD9D0E3), width: 1),
                 ),
               ),
-            )),
+            ),
+          ),
+        ),
       ),
       body: const Column(
         children: [
-          ChipsOptions(),
           ListingWidget(),
         ],
       ),

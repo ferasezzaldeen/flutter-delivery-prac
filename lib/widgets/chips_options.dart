@@ -28,7 +28,7 @@ class _ChipsOptionsState extends State<ChipsOptions> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      // height: 120,
+      width: double.infinity,
       child: ChipsChoice.multiple(
         wrapped: true,
         value: tags,
@@ -44,12 +44,12 @@ class _ChipsOptionsState extends State<ChipsOptions> {
         ),
         choiceStyle: C2ChipStyle.filled(
           color: const Color(0XFFFFFFFF),
-          foregroundColor: Color(0XFFF9586A8),
+          foregroundColor: const Color(0XFFF9586A8),
           borderWidth: 0,
           borderOpacity: 0,
           borderRadius: const BorderRadius.all(Radius.circular(27)),
           selectedStyle: const C2ChipStyle(
-            foregroundColor: Color(0XFFF6C0EE4),
+            foregroundColor: Color(0xfff6c0ee4),
             backgroundColor: Color(0XFFFE2CBFF),
             borderRadius: BorderRadius.all(
               Radius.circular(27),
