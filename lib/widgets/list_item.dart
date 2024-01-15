@@ -19,7 +19,7 @@ class ListItem extends StatelessWidget {
         ));
       },
       child: Card(
-        color: Colors.transparent,
+        color: Color(0XFFF6F5F5),
         elevation: 0,
         child: Padding(
           padding: const EdgeInsets.all(20.0),

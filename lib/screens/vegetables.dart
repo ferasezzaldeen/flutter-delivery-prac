@@ -10,6 +10,7 @@ class VegetablesScreen extends StatelessWidget {
       backgroundColor: const Color(0XFFF6F5F5),
       appBar: AppBar(
         elevation: 0,
+        backgroundColor: const Color(0XFFF6F5F5),
         toolbarHeight: 180,
         title: const Text(
           'Vegetables',
@@ -27,28 +28,31 @@ class VegetablesScreen extends StatelessWidget {
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(0),
           child: SizedBox(
-            height: 40,
+            height: 50,
             width: 374,
-            child: TextField(
-              textAlignVertical: TextAlignVertical.bottom,
-              decoration: InputDecoration(
-                prefixIcon: const Icon(
-                  Icons.search,
-                  size: 24,
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(27.0),
-                  borderSide:
-                      const BorderSide(color: Color(0XFFD9D0E3), width: 1),
-                ),
-                filled: true,
-                hintStyle: TextStyle(color: Colors.grey[800]),
-                hintText: "Search",
-                fillColor: Colors.white,
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(27.0),
-                  borderSide:
-                      const BorderSide(color: Color(0XFFD9D0E3), width: 1),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: TextField(
+                textAlignVertical: TextAlignVertical.bottom,
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(
+                    Icons.search,
+                    size: 24,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(27.0),
+                    borderSide:
+                        const BorderSide(color: Color(0XFFD9D0E3), width: 1),
+                  ),
+                  filled: true,
+                  hintStyle: TextStyle(color: Colors.grey[800]),
+                  hintText: "Search",
+                  fillColor: Colors.white,
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(27.0),
+                    borderSide:
+                        const BorderSide(color: Color(0XFFD9D0E3), width: 1),
+                  ),
                 ),
               ),
             ),
