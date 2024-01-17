@@ -9,6 +9,7 @@ class VegetablesScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0XFFF6F5F5),
       appBar: AppBar(
+        centerTitle: false,
         elevation: 0,
         backgroundColor: const Color(0XFFF6F5F5),
         toolbarHeight: 180,
@@ -31,7 +32,7 @@ class VegetablesScreen extends StatelessWidget {
             height: 50,
             width: 374,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 10),
+              padding: const EdgeInsets.only(bottom: 0),
               child: TextField(
                 textAlignVertical: TextAlignVertical.bottom,
                 decoration: InputDecoration(

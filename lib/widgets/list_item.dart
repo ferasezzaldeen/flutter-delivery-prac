@@ -53,6 +53,7 @@ class ListItem extends StatelessWidget {
                     height: 12,
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
                         vegetable.price.toString(),
@@ -75,37 +76,29 @@ class ListItem extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      SizedBox(
-                        width: 78,
-                        height: 40,
-                        child: IconButton(
-                          color: Colors.white,
-                          onPressed: () {},
-                          icon: SvgPicture.asset('assets/icons/heart.svg'),
-                          style: IconButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                side:
-                                    const BorderSide(color: Color(0XFFFD9D0E3)),
-                                borderRadius: BorderRadius.circular(8),
-                              )),
-                        ),
+                      IconButton(
+                        color: Colors.white,
+                        onPressed: () {},
+                        icon: SvgPicture.asset('assets/icons/heart.svg'),
+                        style: IconButton.styleFrom(
+                            fixedSize: const Size(78, 40),
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              side: const BorderSide(color: Color(0XFFFD9D0E3)),
+                              borderRadius: BorderRadius.circular(8),
+                            )),
                       ),
-                      SizedBox(width: 10),
-                      SizedBox(
-                        width: 78,
-                        height: 40,
-                        child: IconButton(
-                          color: Colors.white,
-                          onPressed: () {},
-                          icon:
-                              SvgPicture.asset('assets/icons/shoppingcart.svg'),
-                          style: IconButton.styleFrom(
-                              backgroundColor: const Color(0XFFF0BCE83),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              )),
-                        ),
+                      const SizedBox(width: 10),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(78, 40),
+                            backgroundColor: const Color(0XFFF0BCE83),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            )),
+                        child:
+                            SvgPicture.asset('assets/icons/shoppingcart.svg'),
                       ),
                     ],
                   )
