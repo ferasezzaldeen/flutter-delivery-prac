@@ -1,6 +1,7 @@
 import 'package:delivery_app/models/vegetable.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class VegetableDetailsScreen extends StatefulWidget {
@@ -34,7 +35,7 @@ class _VegetableDetailsScreenState extends State<VegetableDetailsScreen> {
             options: CarouselOptions(
                 enlargeCenterPage: true,
                 viewportFraction: 1,
-                height: 358,
+                height: 358.sp,
                 onPageChanged: (index, reason) {
                   setState(() {
                     _currentImageIndex = index;
@@ -42,16 +43,16 @@ class _VegetableDetailsScreenState extends State<VegetableDetailsScreen> {
                 }),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 258),
+            margin: EdgeInsets.only(top: 258.sp),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: widget.vegetable.images.asMap().entries.map((entry) {
                 return GestureDetector(
                   onTap: () => _carouselController.animateToPage(entry.key),
                   child: Container(
-                    width: 12.0,
-                    height: 12.0,
-                    margin: EdgeInsets.symmetric(horizontal: 4.0),
+                    width: 12.0.sp,
+                    height: 12.0.sp,
+                    margin: EdgeInsets.symmetric(horizontal: 4.0.sp),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white.withOpacity(
@@ -62,7 +63,7 @@ class _VegetableDetailsScreenState extends State<VegetableDetailsScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 281),
+            margin: EdgeInsets.only(top: 281.sp),
             decoration: const BoxDecoration(
               color: Color(0XFFF6F5F5),
               borderRadius: BorderRadiusDirectional.only(
@@ -71,32 +72,32 @@ class _VegetableDetailsScreenState extends State<VegetableDetailsScreen> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(20, 31, 20, 0),
+              padding: EdgeInsets.fromLTRB(20.sp, 31.sp, 20.sp, 0.sp),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     widget.vegetable.title,
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: Colors.black,
-                        fontSize: 30,
+                        fontSize: 30.sp,
                         fontWeight: FontWeight.w700),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.sp),
                   Row(
                     children: [
                       Text(
                         widget.vegetable.price.toString(),
-                        style: const TextStyle(
-                          fontSize: 32,
+                        style: TextStyle(
+                          fontSize: 32.sp,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      const Text(
+                      Text(
                         '€ / piece',
                         style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 24.sp,
                             fontWeight: FontWeight.w400,
                             color: Color(0XFFF9586A8)),
                       ),
@@ -104,66 +105,58 @@ class _VegetableDetailsScreenState extends State<VegetableDetailsScreen> {
                   ),
                   Text(
                     '~ ${widget.vegetable.weight} gr / piece',
-                    style: const TextStyle(
-                        fontSize: 17,
+                    style: TextStyle(
+                        fontSize: 17.sp,
                         fontWeight: FontWeight.w500,
                         color: Color(0XFF06BE77)),
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32.sp),
                   Text(
                     widget.vegetable.country,
-                    style: const TextStyle(
-                      fontSize: 22,
+                    style: TextStyle(
+                      fontSize: 22.sp,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.sp),
                   Text(
                     widget.vegetable.description,
-                    style: const TextStyle(
-                        fontSize: 17,
+                    style: TextStyle(
+                        fontSize: 17.sp,
                         fontWeight: FontWeight.w400,
                         color: Color(0XFF9586A8)),
                   ),
-                  const SizedBox(height: 56),
+                  SizedBox(height: 56.sp),
                   Row(
                     children: [
-                      SizedBox(
-                        width: 78,
-                        height: 56,
-                        child: IconButton(
-                          color: Colors.white,
-                          onPressed: () {},
-                          icon: SvgPicture.asset('assets/icons/heart.svg'),
-                          style: IconButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                side:
-                                    const BorderSide(color: Color(0XFFFD9D0E3)),
-                                borderRadius: BorderRadius.circular(8),
-                              )),
-                        ),
+                      IconButton(
+                        color: Colors.white,
+                        onPressed: () {},
+                        icon: SvgPicture.asset('assets/icons/heart.svg'),
+                        style: IconButton.styleFrom(
+                            fixedSize: Size(78.sp, 56.sp),
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              side: const BorderSide(color: Color(0XFFFD9D0E3)),
+                              borderRadius: BorderRadius.circular(8),
+                            )),
                       ),
-                      const SizedBox(width: 21),
-                      SizedBox(
-                        height: 56,
-                        width: 272,
-                        child: ElevatedButton.icon(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0XFF0BCE83),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              )),
-                          onPressed: () {},
-                          icon:
-                              SvgPicture.asset('assets/icons/shoppingcart.svg'),
-                          label: const Text(
-                            'ADD TO CART',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
+                      SizedBox(width: 21.sp),
+                      ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                            fixedSize: Size(272.sp, 56.sp),
+                            backgroundColor: Color(0XFF0BCE83),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            )),
+                        onPressed: () {},
+                        icon: SvgPicture.asset('assets/icons/shoppingcart.svg'),
+                        label: Text(
+                          'ADD TO CART',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
